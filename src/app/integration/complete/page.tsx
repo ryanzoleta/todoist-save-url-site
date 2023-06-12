@@ -2,6 +2,7 @@
 
 import React, { useEffect } from 'react';
 import { useSearchParams } from 'next/navigation';
+import axios from 'axios';
 
 const IntegrationCompletePage = () => {
   const searchParams = useSearchParams();
@@ -10,7 +11,15 @@ const IntegrationCompletePage = () => {
 
   useEffect(() => {
     if (code) {
-      document.cookie = `code=${code};max-age=604800;path=/`;
+      axios.post('/integration/token', { code: code }).then((response) => {
+        const { data } = response;
+        const token = data['token'];
+        console.log(data);
+
+        if (token) {
+          document.cookie = `token=${token};max-age=604800;path=/`;
+        }
+      });
     }
   }, [code]);
 
