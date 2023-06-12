@@ -1,8 +1,13 @@
-import React from 'react';
+'use client';
+import React, { useEffect } from 'react';
 
 type Props = {};
 
 const IntegrationCompletePage = (props: Props) => {
+  useEffect(() => {
+    document.cookie = 'code=testcookie123';
+  }, []);
+
   return (
     <div>
       <p>IntegrationCompletePage</p>
