@@ -17,7 +17,7 @@ export async function POST(request: NextRequest) {
 
   try {
     const response = await axios.post('https://todoist.com/oauth/access_token', data);
-    return NextResponse.json({ code: json['code'], token: response.data });
+    return NextResponse.json({ code: json['code'], token: response.data['access_token'] });
   } catch (e) {
     if (e instanceof AxiosError) {
       return NextResponse.json({ error: e.message, response: e.response?.data });
