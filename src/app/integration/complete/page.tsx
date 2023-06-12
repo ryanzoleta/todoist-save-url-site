@@ -10,7 +10,7 @@ const IntegrationCompletePage = () => {
 
   useEffect(() => {
     if (code) {
-      document.cookie = `code=${code}`;
+      document.cookie = `code=${code};max-age=604800;path=/`;
     }
   }, [code]);
 
