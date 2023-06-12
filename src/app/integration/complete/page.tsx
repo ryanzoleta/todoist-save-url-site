@@ -1,17 +1,23 @@
 'use client';
+
 import React, { useEffect } from 'react';
+import { useSearchParams } from 'next/navigation';
 
-type Props = {};
+const IntegrationCompletePage = () => {
+  const searchParams = useSearchParams();
+  const code = searchParams.get('code');
+  const state = searchParams.get('state');
 
-const IntegrationCompletePage = (props: Props) => {
   useEffect(() => {
-    document.cookie = 'code=testcookie123';
-  }, []);
+    if (code) {
+      document.cookie = `code=${code}`;
+    }
+  }, [code]);
 
   return (
     <div>
-      <p>IntegrationCompletePage</p>
-      <p>This is where the user will be redirected to once they authorize the extension</p>
+      <h1 className="text-3xl">Authorization Complete!</h1>
+      <p>You may now close this window</p>
     </div>
   );
 };
