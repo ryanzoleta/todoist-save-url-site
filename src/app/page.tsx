@@ -24,7 +24,11 @@ export default function Home() {
         </div>
         <div className="mb-20 text-center text-lg ">
           Fork this in{' '}
-          <a href="https://github.com/ryanarnold/todoist-save-url-extension" className="underline">
+          <a
+            href="https://github.com/ryanarnold/todoist-save-url-site"
+            className="underline"
+            target="_blank"
+          >
             GitHub
           </a>
         </div>
