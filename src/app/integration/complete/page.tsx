@@ -9,7 +9,7 @@ const IntegrationCompletePage = () => {
   const code = searchParams.get('code');
 
   if (!code) {
-    location.href = '/';
+    // location.href = '/';
   }
 
   useEffect(() => {
@@ -27,15 +27,14 @@ const IntegrationCompletePage = () => {
   }, [code]);
 
   return (
-    <div>
-      {code ? (
-        <>
-          {' '}
-          <h1 className="text-3xl">Authorization Complete!</h1>
-          <p>You may now close this window</p>
-        </>
-      ) : null}
-    </div>
+    <main className="w-full h-full pt-10 px-96">
+      <div className="border p-10 border-slate-300 rounded-md">
+        <h1 className="text-4xl font-bold tracking-tight">Thank you!</h1>
+        <p className="text-base text-gray-500 mt-5">
+          Authorization is complete. You may now close this tab.
+        </p>
+      </div>
+    </main>
   );
 };
 
