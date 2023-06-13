@@ -1,6 +1,6 @@
 # Save URL to Todoist
 
-This is the repo for the main site of the browser extension of the same name](https://github.com/ryanarnold/todoist-save-url-extension). The primary purpose of this is to handle the Todoist API OAuth flow in addition to marketing.
+This is the repo for the main site of the [browser extension of the same name](https://github.com/ryanarnold/todoist-save-url-extension). The primary purpose of this is to handle the Todoist API OAuth flow in addition to marketing.
 
 Currently hosted at https://saveurltodoist.vercel.app/
 
