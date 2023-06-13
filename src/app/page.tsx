@@ -4,9 +4,9 @@ import webstorepic from './chromewebstore.png';
 export default function Home() {
   return (
     <main>
-      <div className="flex justify-center flex-col items-center gap-12 ">
+      <div className="flex flex-col items-center justify-center gap-12 ">
         <div>
-          <h1 className="text-6xl text-center font-bold mt-24 tracking-tighter mb-8">
+          <h1 className="mb-8 mt-24 text-center text-6xl font-bold tracking-tighter">
             Save URL to Todoist
           </h1>
           <p className="text-center text-xl">
@@ -15,7 +15,7 @@ export default function Home() {
         </div>
         <div className="w-4/12">
           <a
-            className="py-3 w-full rounded-full text-white bg-red-500 hover:bg-red-600 block text-center text-lg"
+            className="block w-full rounded-full bg-red-500 py-3 text-center text-lg text-white hover:bg-red-600"
             href="https://github.com/ryanarnold/todoist-save-url-extension"
             target="_blank"
           >

@@ -12,8 +12,8 @@ export default async function AuthorizePage() {
   const url = await getUrl();
 
   return (
-    <main className="text-center h-screen">
-      <p className="text-lg font-bold h-full align-middle">Redirecting to todoist oauth page...</p>
+    <main className="h-screen text-center">
+      <p className="h-full align-middle text-lg font-bold">Redirecting to todoist oauth page...</p>
       <Redirector url={url} />
     </main>
   );

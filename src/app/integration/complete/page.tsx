@@ -27,10 +27,10 @@ const IntegrationCompletePage = () => {
   }, [code]);
 
   return (
-    <main className="w-full h-full pt-10 px-96">
-      <div className="border p-10 border-slate-300 rounded-md">
+    <main className="h-full w-full px-96 pt-10">
+      <div className="rounded-md border border-slate-300 p-10">
         <h1 className="text-4xl font-bold tracking-tight">Thank you!</h1>
-        <p className="text-base text-gray-500 mt-5">
+        <p className="mt-5 text-base text-gray-500">
           Authorization is complete. You may now close this tab.
         </p>
       </div>
