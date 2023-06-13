@@ -7,7 +7,10 @@ import axios from 'axios';
 const IntegrationCompletePage = () => {
   const searchParams = useSearchParams();
   const code = searchParams.get('code');
-  const state = searchParams.get('state');
+
+  if (!code) {
+    location.href = '/';
+  }
 
   useEffect(() => {
     if (code) {
@@ -25,8 +28,13 @@ const IntegrationCompletePage = () => {
 
   return (
     <div>
-      <h1 className="text-3xl">Authorization Complete!</h1>
-      <p>You may now close this window</p>
+      {code ? (
+        <>
+          {' '}
+          <h1 className="text-3xl">Authorization Complete!</h1>
+          <p>You may now close this window</p>
+        </>
+      ) : null}
     </div>
   );
 };
