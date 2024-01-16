@@ -3,7 +3,6 @@
 import React, { useEffect } from 'react';
 import { useSearchParams } from 'next/navigation';
 import axios from 'axios';
-import { track } from '@vercel/analytics';
 
 const IntegrationCompletePage = () => {
   const searchParams = useSearchParams();
@@ -22,7 +21,6 @@ const IntegrationCompletePage = () => {
 
         if (token) {
           document.cookie = `token=${token};max-age=604800;path=/`;
-          track('OAuthComplete');
         }
       });
     }

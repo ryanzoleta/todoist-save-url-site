@@ -1,4 +1,3 @@
-import { track } from '@vercel/analytics/server';
 import Redirector from './redirector';
 import { kv } from '@vercel/kv';
 
@@ -12,8 +11,6 @@ async function getUrl() {
 
 export default async function AuthorizePage() {
   const url = await getUrl();
-
-  track('OAuthInit');
 
   return (
     <main className="h-screen text-center">
