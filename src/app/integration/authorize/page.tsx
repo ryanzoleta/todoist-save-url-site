@@ -1,7 +1,9 @@
+import { track } from '@vercel/analytics/react';
 import Redirector from './redirector';
 import { kv } from '@vercel/kv';
 
 async function getUrl() {
+  // todo: change these to .env variables
   const clientId = await kv.get('todoist_api_client_id');
   const state = await kv.get('todoist_api_state');
   const scopes = await kv.get('todoist_api_scopes');
@@ -10,6 +12,8 @@ async function getUrl() {
 
 export default async function AuthorizePage() {
   const url = await getUrl();
+
+  track('OAuthInit');
 
   return (
     <main className="h-screen text-center">
