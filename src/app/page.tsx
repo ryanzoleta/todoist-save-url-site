@@ -16,7 +16,7 @@ export default function Home() {
         <div className="w-4/12">
           <a
             className="block w-full rounded-full bg-red-500 py-3 text-center text-lg text-white hover:bg-red-600"
-            href="https://github.com/ryanarnold/todoist-save-url-extension"
+            href="https://chromewebstore.google.com/detail/save-url-to-todoist/ejplkbdbohpmjodaclljijjeajbjkcci"
             target="_blank"
           >
             Download Chrome Extension
