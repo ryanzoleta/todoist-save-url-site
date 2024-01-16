@@ -1,4 +1,4 @@
-import { track } from '@vercel/analytics/react';
+import { track } from '@vercel/analytics/server';
 import Redirector from './redirector';
 import { kv } from '@vercel/kv';
 
